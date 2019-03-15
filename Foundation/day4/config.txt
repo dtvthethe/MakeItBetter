@@ -1,0 +1,25 @@
+[DEFAULT]
+address = Đà Nẵng|str
+limit_time = 3000|int
+
+
+knock knock ! Hi there! ><?:"{}
+
+        facebook
+
+
+
+[DATABASE]
+enable = True|bool
+  database_name = FaceRecognition|str
+host = localhost|str
+user = as|str
+pwd = 123456789|str
+
+
+
+[UI]
+menubar = True|bool
+bg_color = Red|str
+img_src = www.facebook.com/a/g/f.ng|str
+
