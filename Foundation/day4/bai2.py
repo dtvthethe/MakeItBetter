@@ -1,6 +1,6 @@
-import bai1
+import main
 
-text = bai1.read('config.txt').split('\n')
+text = main.read('config.txt').split('\n')
 my_dict = {}
 for line in text:
     line = line.strip()
