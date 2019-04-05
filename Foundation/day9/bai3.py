@@ -1,3 +1,4 @@
+import json
 from ast import literal_eval
 from text_utility import read, write
 
@@ -54,6 +55,9 @@ class QuanLTaiLieu:
             print(tl.__dict__)
 
     def load_dl(self, str_file_data):
+        # f = open(str_file_data, 'r')
+        # data = json.load(f)
+        # f.close()
         data_rd = read(str_file_data).splitlines()
         for item in data_rd:
             dict_item = literal_eval(item)
@@ -74,10 +78,10 @@ class QuanLTaiLieu:
 
 
     def ghi_file_json(self, str_file_data):
-        str_data = ''
+        str_data = '{'
         for tl in self.ds_tai_lieu:
             str_data += str(tl.__dict__)+'\n'
-        write(str_file_data, str_data)
+        write(str_file_data, str_data+'}')
 
 qltv = QuanLTaiLieu()
 qltv.load_dl('data.json')
