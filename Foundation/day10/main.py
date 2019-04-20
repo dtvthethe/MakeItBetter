@@ -21,9 +21,9 @@ def counter_color_by_pixel(file_name, rgb_point):
     return counter
 
 
-if(os.path.exists(str_img)):
-    print(counter_color_by_pixel(str_img, (255, 0, 0)))
-else:
-    create_image_X_shape(8, (255, 0, 0), str_img)
+if(not os.path.exists(str_img)):
+    create_image_X_shape(str_img, (255, 0, 0), 10)
+
+print('Tổng số ô có màu đỏ: %d' %counter_color_by_pixel(str_img, (255, 0, 0)))
 
 
